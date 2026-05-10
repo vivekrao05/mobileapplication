@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "mcp__idea__get_all_open_file_paths",
-      "mcp__idea__find_files_by_name_keyword"
-    ]
-  }
-}

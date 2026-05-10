@@ -10,4 +10,7 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Long> {
     List<Book> findByAuthorId(Long authorId);
     List<Book> findByGenreId(Long genreId);
+
+    boolean existsByGenreId(Long genreId);
+    boolean existsByAuthorId(Long authorId);
 }

@@ -40,7 +40,7 @@ public class BookService {
         Book book = new Book();
         book.setTitle(req.getTitle());
         book.setIsbn(req.getIsbn());
-        book.setPublishedYear(Math.toIntExact(req.getPublishedYear()));
+        book.setPublishedYear(req.getPublishedYear());
         book.setAuthor(authorRepo.findById(req.getAuthorId())
                 .orElseThrow(() -> new RuntimeException("Author not found: " + req.getAuthorId())));
         book.setGenre(genreRepo.findById(req.getGenreId())

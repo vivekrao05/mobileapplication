@@ -3,10 +3,7 @@ package com.bookstore.bookstore_api.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
@@ -22,5 +19,6 @@ public class Author {
     private String biography;
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<Book> books;
 }
